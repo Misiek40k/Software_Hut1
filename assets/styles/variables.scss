@@ -1,0 +1,50 @@
+$color-1: #000;
+$color-2: #2A2A2A;
+$color-3: #3046FF;
+$color-4: #FFF;
+$color-5: #F7F7F7;
+$color-6: #E7E7E7;
+$color-7: #FEFFFF;
+$color-8: #1DC48E;
+$color-9: #EDEDED;
+$color-10: #00C599;
+$color-11: #FF0000;
+$color-12: #EBEBEB;
+$color-13: #F5F5F5;
+$color-14: #4285F4;
+$color-15: rgba(66,133,244,0.45);
+$color-16: rgba(0,197,153,0.47);
+$color-17: #E8E9EB;
+$color-18:#00C599;
+$color-19: #EEEEEE;
+$color-20: #005AFF;
+$color-21: #1A1A18;
+$color-22: #222222;
+
+$base-unit: 1rem * 1.25;
+
+$body-font-size: $base-unit;
+$body-color: $color-4;
+
+
+$first-base-font-family: 'Poppins', sans-serif;
+$ffw-regular: 400;
+$ffw-bold: 700;
+
+$second-base-font-family: 'Roboto', sans-serif;
+$sfw-light: 300;
+$sfw-regular: 400;
+$sfw-bold: 700;
+
+$h1-font-size: $base-unit * 3.5;
+$h2-font-size: $base-unit * 1.5;
+$h3-font-size: $base-unit * .95;
+
+$space: $base-unit * 2;
+
+$wrapper-max: $base-unit * 59.35;
+
+$br-mobile: 350px;
+$br-tablet: 768px;
+$br-dekstop: 1200px;
+$br-dekstop-xl: 1680px;

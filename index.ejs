@@ -11,34 +11,8 @@
 </head>
 
 <body>
-    <header class="main-hdr">
-        <a href="/" class="hdr-logo">
-            <img src="/" alt="logo">
-        </a>
-        <div class="wrapper">
-
-            <nav class="main-nav">
-                <ul>
-                    <li>
-                        <a href="">Category 1</a>
-                    </li>
-                    <li>
-                        <a href="">Category 2</a>
-                    </li>
-                    <li>
-                        <a href="">Category 3</a>
-                    </li>
-                    <li>
-                        <a href="">Category 4</a>
-                    </li>
-                    <li>
-                        <a href="">Category 5</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
+    ${require('./assets/templates/c_header.html')}
+    
     <main>
         <section>
             <h1>section1</h1>
@@ -46,7 +20,7 @@
         </section>
     </main>
 
-    <footer class="main-ftr">footer</footer>
+    ${require('./assets/templates/c_footer.html')}
 
 </body>
 

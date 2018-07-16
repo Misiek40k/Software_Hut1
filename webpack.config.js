@@ -85,6 +85,18 @@ module.exports = {
                 ]
             },
 
+            //HTML LOADER
+            {
+                test: /\.html$/,
+                use: [{
+                    loader: 'html-loader',
+                    options: {
+                        interpolate: true,
+                        minimize: true /* optional: removeComments: false, collapseWhitespace: true*/
+                    }
+                }],
+            },
+
             // IMAGES
             {
                 test: /\.(jpe?g|png|gif)$/,

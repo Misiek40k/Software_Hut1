@@ -7,10 +7,14 @@
     left: 0;
     width: 100%;
     height: $space * 2;
-    z-index: 20; //overflow: hidden;
+    z-index: 20; 
+    overflow: hidden;
     background-color: $color-4;
     color: $color-2;
     transition: 2s;
+    @include min-media($br-dekstop) {
+        height: $space * 3.5;
+    }
 }
 
 .hdr-logo {
@@ -28,10 +32,9 @@
     margin-top: $space * 2;
     .menu1 {
         li {
-            visibility: hidden;
             text-align: center;
             padding: $space * 0.5 0;
-            display: block;
+            display: none;
         }
     }
     @include min-media($br-dekstop) {
@@ -41,7 +44,7 @@
         margin-top: $space * 0.75;
         .menu1 {
             li {
-                visibility: visible;
+                display: block;
                 float: left;
                 margin-left: $space * .5;
                 padding: 0;
@@ -49,23 +52,24 @@
             }
         }
     }
+}
+
+.secondary-nav {
+    margin-top: $space *-2;
     .menu2 {
-        margin-top: $space * 2;
         li {
-            visibility: hidden;
             text-align: center;
             padding: $space * 0.5 0;
-            display: block;
         }
     }
     @include min-media($br-dekstop) {
         position: absolute;
         top: 0;
-        right: $space *2;
+        left: $space * 5;
         margin-top: $space * 0.75;
         .menu2 {
             li {
-                visibility: visible;
+                display: block;
                 float: left;
                 margin-left: $space * .5;
                 padding: 0;

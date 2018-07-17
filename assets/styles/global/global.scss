@@ -4,12 +4,13 @@
 
 html {
     box-sizing: border-box;
+    background-color: $background-color;
 
     font-size: 12px;
     @media (min-width: $br-mobile) {
         font-size: 16px;
     }
-    @media (min-width: $br-dekstop) {
+    @media (min-width: $br-desktop) {
         font-size: 20px;
     }
 }
@@ -58,8 +59,8 @@ button {
     padding-right: $space;
     padding-left: $space;
     max-width: $wrapper-max;
+ } 
 
-}
 
 .component{
     margin: $space 0;

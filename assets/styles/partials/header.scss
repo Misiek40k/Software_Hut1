@@ -3,25 +3,23 @@
 @import '../global/mixin.scss';
 @import '../global/variables.scss';
 .main-hdr {
-    position: absolute;
     left: 0;
     width: 100%;
     height: $space * 2;
     z-index: 20;
     overflow: hidden;
-    transition: 2s;
     .nav-wrapper {
         margin: 0 auto;
-        padding-right: $space*.5;
-        padding-left: $space*.5;
         height: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        padding-left: $space*.5;
     }
     @include min-media($br-desktop) {
         height: $space * 4;
         padding-left: $space*2;
+        overflow: visible;
     }
 }
 
@@ -53,7 +51,8 @@
         flex-basis: 50%;
         order: 1;
         top: 0;
-        padding-left: $space *3.5;
+        padding-left: $space *2.5;
+        padding-right: $space;
         margin-top: $space;
         &__menu {
             li {
@@ -68,6 +67,7 @@
                 &:first-child {
                     margin-left: 0;
                 }
+               
             }
         }
     }
@@ -84,11 +84,13 @@
                 margin-left: $space*1.5;
                 padding: 0;
                 border: 0;
-                margin-right: $space*1.75;
+                
+                flex-grow: initial;
                 &:first-child {
                     margin-right: 0;
                     background-color: $background-color;
                 }
+
             }
         }
     }

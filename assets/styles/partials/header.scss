@@ -109,13 +109,12 @@
 
 .secondary-nav {
     order: 1;
-    flex-basis: 80%;
+    flex-basis: 50%;
     margin-top: $space *.5;
     font-family: $second-base-font-family;
     font-weight: $sfw-regular;
     font-size: $base-unit*.75;
     &__menu {
-        display: none;
         li {
             text-align: center;
             padding: $space*.3 0 $space * 0.5;
@@ -150,8 +149,6 @@
                     }
                 }
             }
-        }&__select{
-            //wip
         }
     }
     &__select {

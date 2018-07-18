@@ -41,7 +41,7 @@
     margin-top: $space * 2;
     flex-basis: 20%;
     &__menu {
-        li {
+        &--li {
             text-align: center;
             padding: $space * 0.5 0;
             display: none;
@@ -49,27 +49,27 @@
     }
     @include min-media($br-desktop) {
         display: flex;
-        flex-basis: 70%;
+        flex-basis: 80%;
         order: 1;
         top: 0;
         padding-left: $space *2.5;
-        margin-top: $space;
+        margin-top: 0;
         justify-content: flex-end;
+        align-items: stretch;
         &__menu {
-            li {
+            &--li {
                 font-family: $second-base-font-family;
                 font-weight: $sfw-regular;
                 font-size: $base-unit*.65;
                 display: block;
                 float: left;
                 margin-left: $space;
+                margin-top: $space;
                 padding: 0;
                 border: 0;
                 &:first-child {
                     margin-left: 0;
                 }
-
-              
                 &:hover {
                     font-weight: $sfw-bold;
                     &::after {
@@ -89,26 +89,30 @@
         @include min-media($br-desktop) {
             display: flex;
             justify-content: space-between;
-            max-width: $space*11.5;
-            float: right;
-            li {
+            align-items: center;
+            &--link {
                 font-family: $second-base-font-family;
                 font-weight: $sfw-regular;
                 font-size: $base-unit*.85;
                 display: flex;
                 margin-left: $space*1.5;
-                padding: 0;
-                border: 0;
                 &:first-child {
-                    margin-right: 0;
-                    background-color: $background-color;
+                    margin-left: $space;
+                    margin-top:  $space * .75;
                 }
-                &:last-child{
-                    padding-left: $space;
-                    background-color: red;
-                    padding-right: $space;
+                &:nth-child(2){
+                    margin-top:  $space * .67;
                 }
-
+                &:last-child {
+                    color: $background-color;
+                    background-color: $product-color;
+                    align-self: stretch;
+                    p{
+                        padding-left: $space*1.5;
+                        padding-right: $space*3;
+                        padding-top: $space; 
+                    }
+                }
             }
         }
     }
@@ -122,7 +126,7 @@
     font-weight: $sfw-regular;
     font-size: $base-unit*.75;
     &__menu {
-        li {
+        &--li {
             text-align: center;
             padding: $space*.3 0 $space * 0.5;
         }
@@ -134,19 +138,22 @@
         top: 0;
         padding-left: $space * 7;
         margin-top: $space * 1.5;
+        
         &__menu {
-            display: block;
-            li {
+            &--li {
                 display: block;
                 float: left;
                 margin-left: $space * 1.5;
                 padding: 0;
                 border: 0;
+                border-bottom: 2px solid $background-color;
                 &:first-child {
                     margin-left: 0;
                 }
                 &:not(:first-child):hover {
                     font-weight: $sfw-bold;
+                    border-bottom: 0;
+                    letter-spacing: 0;
                     &::after {
                         content: "";
                         display: block;
@@ -172,15 +179,15 @@
     padding: $space $space*0.5;
     width: $space*1.5;
     color: $text-color;
-    span {
+    &__hamburger {
         position: absolute;
         top: 50%;
         left: 50%;
         margin-left: -.25 * $space;
         display: block;
         width: $space * 0.5;
-        height: $space * .5 * 0.125;
-        background-color: $text-color;
+        height: $space * .5 * 0.1;
+        background-color: $product-color;
         &:before,
         &:after {
             content: "";
@@ -188,8 +195,8 @@
             left: 50%;
             margin-left: -.25 * $space;
             width: $space * .5;
-            height: $space * .5 * 0.125;
-            background-color: $text-color;
+            height: $space * .5 * 0.1;
+            background-color: $product-color;
         }
         &::before {
             margin-top: -0.125 * $space;

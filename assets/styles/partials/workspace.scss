@@ -8,20 +8,20 @@
         margin: $space 0 0;
     }
 }
+
 .workspace {
     left: 0;
     width: 100%;
     height: $base-unit*25;
     overflow: hidden;
     background-color: #00C599;
-    background-image:url(/assets/images/hand.png), url(/assets/images/first_section_bg.png) ;
+    background-image: url(/assets/images/hand.png), url(/assets/images/first_section_bg.png);
     background-repeat: no-repeat;
     background-size: $base-unit*14, cover;
-    background-position: 50% $space*5,right;
-
+    background-position: 50% $space*5, right;
     @include min-media($br-desktop) {
         height: $base-unit*34;
         background-size: contain, cover;
-        background-position: 90% 50%,right;
+        background-position: 90% 50%, right;
     }
 }

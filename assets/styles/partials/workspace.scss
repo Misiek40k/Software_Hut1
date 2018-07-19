@@ -1,18 +1,16 @@
-.component {
-    margin-top: 0;
-    @include min-media($br-desktop) {
-        margin: $space 0 0;
-    }
-}
-
-.wrapper {
+.wrapper-workspace {
+    margin: 0 auto;
+    max-width: $wrapper-max;
     padding-top: $base-unit*4;
     @include min-media($br-desktop) {
         padding-top: $base-unit*7;
+        padding-right: $space;
+        padding-left: $space;
     }
 }
 
 .workspace {
+    margin-top: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -22,6 +20,7 @@
     background-size: $base-unit*14, $base-unit*20;
     background-position: 50% $space*5, 50% $space*8;
     @include min-media($br-desktop) {
+        margin: $space 0 0;
         background-image: url(/assets/images/hand.png), url(/assets/images/first_section_bg.png);
         height: $base-unit*34;
         background-size: contain, cover;

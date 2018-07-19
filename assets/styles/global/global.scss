@@ -54,18 +54,6 @@ button {
     margin-bottom: $space;
 }
 
-.wrapper {
-    margin: 0 auto;
-    max-width: $wrapper-max;
-    @include min-media($br-desktop) {
-        padding-right: $space;
-        padding-left: $space;
-    }
-}
-
-.component {
-    margin: $space 0 0;
-}
 
 %bigHeadlineText {
     font-family: $first-base-font-family;

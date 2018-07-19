@@ -1,11 +1,9 @@
 @import 'variables.scss';
 @import 'mixin.scss';
 @import 'reset.scss';
-
 html {
     box-sizing: border-box;
     background-color: $background-color;
-
     font-size: 12px;
     @media (min-width: $br-mobile) {
         font-size: 16px;
@@ -14,7 +12,10 @@ html {
         font-size: 20px;
     }
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
@@ -34,7 +35,6 @@ button {
     background: none;
     padding: 0;
 }
-
 
 .h1 {
     font-size: $h1-font-size;
@@ -56,26 +56,29 @@ button {
 
 .wrapper {
     margin: 0 auto;
-    padding-right: $space;
-    padding-left: $space;
     max-width: $wrapper-max;
- } 
+    @include min-media($br-desktop) {
+        padding-right: $space;
+        padding-left: $space;
+    }
+}
 
-
-.component{
+.component {
     margin: $space 0 0;
 }
 
-%bigHeadlineText{
+%bigHeadlineText {
     font-family: $first-base-font-family;
     font-weight: $ffw-bold;
+    color: $product-color;
     font-size: $base-unit*3.5;
     line-height: $base-unit*4;
 }
 
-%descriptionText{
-    font-family: $secont-base-font-family;
+%descriptionText {
+    font-family: $second-base-font-family;
     font-weight: $sfw-regular;
+    color: $text-color;
     font-size: $base-unit*1.5;
     line-height: $base-unit*2;
 }

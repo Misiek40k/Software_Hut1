@@ -19,14 +19,15 @@
 .workspace {
     left: 0;
     width: 100%;
-    height: $base-unit*25;
+    height: $base-unit*38;
     overflow: hidden;
-    background-color: #00C599;
-    background-image: url(/assets/images/hand.png), url(/assets/images/first_section_bg.png);
+    background-color: $background-color;
+    background-image: url(/assets/images/hand.png), url(/assets/images/desks.png);
     background-repeat: no-repeat;
-    background-size: $base-unit*14, cover;
-    background-position: 50% $space*5, right;
+    background-size: $base-unit*14, $base-unit*20;
+    background-position: 50% $space*5, 50% $space*8;
     @include min-media($br-desktop) {
+        background-image: url(/assets/images/hand.png), url(/assets/images/first_section_bg.png);
         height: $base-unit*34;
         background-size: contain, cover;
         background-position: 90% 50%, right;
@@ -34,15 +35,33 @@
     &__cont {
         text-align: center;
         @include min-media($br-desktop) {
-            width: 50%;
-            text-align: left;
+            width: 60%;
+            
         }
-        &--txt {
-            display: none;
-        }
-        &--links {
-            display: none;
-            @include min-media($br-tablet){
+
+       
+        &--items {
+            display: flex;
+            flex-direction: column;
+            padding-left: $space *.5;
+            padding-right: $space *.5;
+            background-color: $background-color;
+            @include min-media($br-desktop){
+                margin-top: 0;
+                padding-left: 0;
+            padding-right: 0;
+            }
+            &--head{
+                text-align: left;
+                @extend%bigHeadlineText;
+                @include max-media($br-desktop){
+                    font-size: $space;
+                    line-height: $space*1.5;
+                    
+                }
+            }
+            &--txt {}
+            &--links {
                 display: flex;
             }
         }

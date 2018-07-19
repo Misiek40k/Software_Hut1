@@ -2,6 +2,7 @@
 @import '../global/reset.scss';
 @import '../global/mixin.scss';
 @import '../global/variables.scss';
+
 .component {
     margin-top: 0;
     @include min-media($br-desktop) {

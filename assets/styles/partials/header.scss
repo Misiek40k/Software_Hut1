@@ -178,6 +178,9 @@
     padding: $space $space*0.5;
     width: $space*1.5;
     color: $text-color;
+    &:hover{
+        cursor: pointer;
+    }
     &__hamburger {
         position: absolute;
         top: 50%;

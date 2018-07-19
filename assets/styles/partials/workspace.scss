@@ -19,7 +19,6 @@
 .workspace {
     left: 0;
     width: 100%;
-    height: $base-unit*38;
     overflow: hidden;
     background-color: $background-color;
     background-image: url(/assets/images/hand.png), url(/assets/images/desks.png);
@@ -36,33 +35,61 @@
         text-align: center;
         @include min-media($br-desktop) {
             width: 60%;
-            
         }
-
-       
         &--items {
             display: flex;
             flex-direction: column;
-            padding-left: $space *.5;
-            padding-right: $space *.5;
-            background-color: $background-color;
-            @include min-media($br-desktop){
+            @include min-media($br-desktop) {
                 margin-top: 0;
                 padding-left: 0;
-            padding-right: 0;
+                padding-right: 0;
+                background-color: transparent;
             }
-            &--head{
+            &--head {
                 text-align: left;
                 @extend%bigHeadlineText;
-                @include max-media($br-desktop){
-                    font-size: $space;
-                    line-height: $space*1.5;
-                    
+                @include max-media($br-desktop) {
+                    align-self: center;
+                    font-size: $space*.75;
+                    line-height: $space;
+                    padding-left: $space*.25;
+                    padding-right: $space*.25;
                 }
             }
-            &--txt {}
+            &--txt {
+                @extend%descriptionText;
+                text-align: left;
+                background-color: $background-color;
+                padding-top: $space;
+                padding-left: $base-unit;
+                padding-right: $base-unit;
+                margin-top: $space*8;
+                align-self: center;
+                @include min-media($br-tablet) {
+                    padding-left: $space*3;
+                    padding-right: $space*3;
+                }
+                @include min-media($br-desktop) {
+                    margin-top: 0;
+                    padding-top: $space;
+                    text-align: left;
+                    background-color: transparent;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
             &--links {
+                padding-top: $space;
                 display: flex;
+                background-color: $background-color;
+                align-self: center;
+                align-items: center;
+                justify-content: space-between;
+                @include min-media($br-desktop) {
+                    background-color: transparent;
+                }
+                a {
+                }
             }
         }
     }

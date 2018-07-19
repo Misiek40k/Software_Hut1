@@ -61,8 +61,8 @@
                 margin-top: $space*8;
                 align-self: center;
                 @include min-media($br-tablet) {
-                    padding-left: $space*3;
-                    padding-right: $space*3;
+                    padding-left: $space*2.5;
+                    padding-right: $space*2.5;
                 }
                 @include min-media($br-desktop) {
                     margin-top: 0;

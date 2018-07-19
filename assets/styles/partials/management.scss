@@ -1,0 +1,68 @@
+.wrapper-managment {
+    margin: 0 auto;
+    max-width: $wrapper-max;
+    padding-top: $space*2.5;
+    @include min-media($br-desktop) {
+        padding-top: 0;
+        padding-right: $space;
+        padding-left: $space;
+    }
+}
+
+.management {
+    margin: $space 0 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: $background-color;
+    &__cont {
+        &--items {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            @include min-media($br-tablet) {
+                justify-content: space-between;
+                padding-left: $space*2.5;
+                padding-right: $space*2.5;     
+            }
+            @include min-media($br-desktop){
+                padding-left: 0;
+                padding-right: 0;   
+            }
+        }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            max-width: $space*8;
+            margin-left: $space*.5;
+                margin-right: $space*.5;
+           
+            @include min-media($br-tablet){
+                margin-left: 0;
+                margin-right: 0;
+            }
+            
+            &:not(:first-child) {
+                display: none;
+                @include min-media($br-tablet) {
+                    display: flex;
+                }
+            }
+            &--head {
+                @extend%h2;
+                margin-bottom: $space;
+            }
+            &--txt {
+                
+                @extend%paragraphText;
+                @include min-media($br-tablet){
+                    max-width: $space*4;
+                }
+                @include min-media($br-desktop){
+                    max-width: $space*8;
+                }
+            }
+        }
+    }
+}

@@ -82,13 +82,21 @@
                 padding-top: $space;
                 display: flex;
                 background-color: $background-color;
-                align-self: center;
-                align-items: center;
-                justify-content: space-between;
+                justify-content: center;
+                
+                
                 @include min-media($br-desktop) {
                     background-color: transparent;
+                    justify-content: flex-start;
                 }
                 a {
+                    img{
+                        width: 60%;
+                        @include min-media($br-tablet){
+                            width: 70%;
+                        }
+                    }
+                    
                 }
             }
         }

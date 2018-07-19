@@ -65,3 +65,17 @@ button {
 .component{
     margin: $space 0 0;
 }
+
+%bigHeadlineText{
+    font-family: $first-base-font-family;
+    font-weight: $ffw-bold;
+    font-size: $base-unit*3.5;
+    line-height: $base-unit*4;
+}
+
+%descriptionText{
+    font-family: $secont-base-font-family;
+    font-weight: $sfw-regular;
+    font-size: $base-unit*1.5;
+    line-height: $base-unit*2;
+}

@@ -2,7 +2,6 @@
 @import '../global/reset.scss';
 @import '../global/mixin.scss';
 @import '../global/variables.scss';
-
 .component {
     margin-top: 0;
     @include min-media($br-desktop) {
@@ -10,8 +9,11 @@
     }
 }
 
-.wrapper{
-    padding-top: $base-unit*5;
+.wrapper {
+    padding-top: $base-unit*4;
+    @include min-media($br-desktop) {
+        padding-top: $base-unit*7;
+    }
 }
 
 .workspace {
@@ -28,5 +30,21 @@
         height: $base-unit*34;
         background-size: contain, cover;
         background-position: 90% 50%, right;
+    }
+    &__cont {
+        text-align: center;
+        @include min-media($br-desktop) {
+            width: 50%;
+            text-align: left;
+        }
+        &--txt {
+            display: none;
+        }
+        &--links {
+            display: none;
+            @include min-media($br-tablet){
+                display: flex;
+            }
+        }
     }
 }

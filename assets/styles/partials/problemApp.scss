@@ -15,31 +15,51 @@
     width: 100%;
     overflow: hidden;
     &__header {
+        @extend%h4SectionHeader;
         margin-bottom: $space*.25;
+        margin-left: $space*.5;
+        @include min-media($br-desktop){
+            margin-left: 0;
+        }
     }
     &__cont {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        max-width: $space*7;
+        max-width: 100%;
         justify-content: flex-start;
         &__item {
             display: flex;
             flex-direction: column;
-            padding: $space*1.5; //wip
+            padding: $space*1.5; 
             background-color: $item-color;
             margin-right: $space*.5;
+            &:not(:first-child) {
+                display: none;
+                @include min-media($br-tablet) {
+                    display: flex;
+                    max-width: $space*7;
+                }
+            }
             &--desk {
+            display: inline-flex;
                 width: 100%;
                 margin-bottom: $space*.75;
+                img{
+                    margin: 0 auto;
+                }
+                
             }
             &--head {
                 margin-bottom: $space*.25;
+                @extend%h3;
             }
-            &--txt {}
+            &--txt {
+                @extend%paragraphText;
+            }
         }
         &--dots {
-            margin-top: $space;
+            margin-top: $space*.5;
             text-align: center;
             @include min-media($br-tablet) {
                 display: none;

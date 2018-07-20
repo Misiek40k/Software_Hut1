@@ -33,7 +33,10 @@
             flex-direction: column;
             padding: $space*1.5; 
             background-color: $item-color;
-            margin-right: $space*.5;
+            margin-right: 0;
+            @include min-media($br-tablet){
+                margin-right: $space*.5;
+            }
             &:not(:first-child) {
                 display: none;
                 @include min-media($br-tablet) {

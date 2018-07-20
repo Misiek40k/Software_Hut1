@@ -2,13 +2,10 @@
 // but allowing components to change
 // http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 
-@import 'global/global.scss';
-@import 'global/mixin.scss';
-@import 'global/variables.scss';
-@import 'global/reset.scss';
-@import 'partials/header.scss';
-@import 'partials/footer.scss';
-@import 'partials/workspace.scss';
-@import 'partials/management.scss';
-@import 'partials/problemApp.scss';
-@import 'partials/features.scss';
+@import 'global/global';
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/workspace';
+@import 'partials/management';
+@import 'partials/problemApp';
+@import 'partials/features';

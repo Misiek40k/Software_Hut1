@@ -1,6 +1,6 @@
-@import 'variables.scss';
-@import 'mixin.scss';
-@import 'reset.scss';
+@import 'variables';
+@import 'mixin';
+@import 'reset';
 html {
     box-sizing: border-box;
     background-color: $background-color;

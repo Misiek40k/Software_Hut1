@@ -24,7 +24,7 @@
         background-image: url(/assets/images/hand.png), url(/assets/images/first_section_bg.png);
         height: $base-unit*34;
         background-size: contain, cover;
-        background-position: 90% 50%, right;
+        background-position: 90% $space*3, right;
     }
     &__cont {
         text-align: center;

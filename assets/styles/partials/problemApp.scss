@@ -1,24 +1,43 @@
+.wrapper-problemApp {
+    margin: 0 auto;
+    max-width: $wrapper-max;
+    padding-top: $base-unit*4;
+    @include min-media($br-desktop) {
+        padding-top: $base-unit*7;
+        padding-right: $space;
+        padding-left: $space;
+    }
+}
+
 .problemApp {
     margin: $space 0 0;
     left: 0;
     width: 100%;
     overflow: hidden;
+    &__header {
+        margin-bottom: $space*.25;
+    }
     &__cont {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         max-width: $space*7;
-        
-        &__item{
+        justify-content: flex-start;
+        &__item {
             display: flex;
             flex-direction: column;
-            padding: 60px 60px 60px 60px; //wip
-            background-color: blue;
-            &--desk{
-                
+            padding: $space*1.5; //wip
+            background-color: $item-color;
+            margin-right: $space*.5;
+            &--desk {
+                width: 100%;
+                margin-bottom: $space*.75;
             }
+            &--head {
+                margin-bottom: $space*.25;
+            }
+            &--txt {}
         }
-
         &--dots {
             margin-top: $space;
             text-align: center;

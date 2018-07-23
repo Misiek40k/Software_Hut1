@@ -1,6 +1,12 @@
 .building-wrapper {
     margin: 0 auto;
     max-width: $wrapper-max;
+    padding-right: $space*.5;
+    padding-left: $space *.5;
+    @include min-media($br-tablet) {
+        padding-right: $space*3;
+        padding-left: $space *3;
+    }
     @include min-media($br-desktop) {
         padding-top: 0;
         padding-right: $space;
@@ -14,28 +20,53 @@
     width: 100%;
     overflow: hidden;
     background-color: $background-color;
+    background-image: url(/assets/images/layer_59.png);
+    background-repeat: no-repeat;
+    background-size: $base-unit*16;
+    background-position: 50% 75%;
+    @include min-media($br-desktop) {
+        background-size: $base-unit*20;
+        background-position: 80% 5%;
+    }
     &__cont {
         display: flex;
         flex-direction: column;
-
-        @include min-media($br-tablet){
-
-        }
-
-        &__head{
+        @include min-media($br-tablet) {}
+        &__head {
             margin-top: $space*3;
-            margin-bottom: $space*2;
-            @include min-media($br-desktop){
+            margin-bottom: $space*1.5;
+            @include min-media($br-desktop) {
                 margin-top: $space*6.5;
+                margin-bottom: $space*2;
             }
         }
-
-        &__descr{
-            
+        &__descr {
+            margin-bottom: $space*9.5;
+            @include min-media($br-desktop){
+                margin-bottom: $space*2;
+            }
         }
-
-        &__paragraphs{
-            
+        &__paragraphs {
+            display: flex;
+        }
+        &__paragraph {
+            display: flex;
+            flex-direction: column;
+            @include min-media($br-tablet) {}
+            @include min-media($br-desktop) {
+                max-width: $space*13;
+                padding-right: $space*3.5;
+            }
+            &:last-of-type {
+                display: none;
+                @include min-media($br-desktop) {
+                    display: flex;
+                }
+            }
+            &__head {
+                padding-bottom: $space*.5;
+            }
+            &__txt {}
         }
     }
 }

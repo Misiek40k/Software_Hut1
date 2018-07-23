@@ -1,30 +1,128 @@
-.main-foot-wrapper {}
+.main-foot-wrapper {
+    margin: 0 auto;
+    max-width: $wrapper-max;
+    @include min-media($br-desktop) {
+        padding-right: $space;
+        padding-left: $space;
+    }
+}
 
 .main-foot {
     background-color: $product-color;
-    color: $background-color;
     margin-top: $space*1.5;
     @include min-media($br-desktop) {
         margin-top: $space*2.5;
     }
     &__nav {
+        display: flex;
         padding-top: $space*2.5;
-
-        &__col{
-
+        flex-direction: column;
+        white-space: nowrap;
+        padding-bottom: $space*2.5;
+        @include min-media($br-tablet) {
+            flex-direction: row;
         }
-
-        &__cat{}
-
-        &__lnk{
+        @include min-media($br-desktop) {
+            padding-bottom: $space*4.5;
+        }
+        &__col {
+            display: flex;
+            flex-direction: column;
+            padding-left: $space*.5;
+            padding-right: $space*.5;
+            &:not(:first-of-type) {
+                margin-top: $space*1.5;
+            }
+            @include min-media($br-tablet) {
+                margin: 0;
+                padding-right: $space *3.5;
+                padding-left: 0;
+                &:first-child {
+                    padding-left: $space*3;
+                }
+                &:not(:first-of-type) {
+                    margin-top: 0;
+                }
+            }
+            @include min-media($br-desktop) {
+                padding-right: $space *4.5;
+                padding-left: 0;
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+        }
+        &__cat {
+            padding-bottom: $space*.75;
+            @extend%h4SectionHeader;
+            color: $background-color;
+        }
+        &__lnk {
+            @extend%paragraphText;
+            color: $background-color;
         }
     }
-
-    &__btns{}
-
-    &__btn{
-        &__hamburger{}
-
-        &__quit{}
+    &__btns {
+        text-align: right;
+    }
+    &__btn {
+        padding: $space*.5 $space*0.5;
+        margin-bottom: $space*.5;
+        width: $space;
+        height: 100%;
+        @include min-media($br-desktop) {
+            margin-bottom: $space*3;
+        }
+        &:last-of-type {
+            margin-right: $space*.5;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        &__hamburger {
+            top: 50%;
+            left: 50%;
+            display: block;
+            width: $space * 0.5;
+            height: $space * .5 * 0.1;
+            background-color: $background-color;
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                margin-left: -.25 * $space;
+                width: $space * .5;
+                height: $space * .5 * 0.1;
+                background-color: $background-color;
+            }
+            &::before {
+                margin-top: -0.1 * $space;
+            }
+            &::after {
+                margin-top: 0.1*$space;
+            }
+        }
+        &__quit {
+            position: relative;
+            display: block;
+            width: $space*.5;
+            height: $space*.25;
+            &:before,
+            &::after {
+                content: '';
+                position: absolute;
+                height: $space*0.05;
+                width: 100%;
+                top: 80%;
+                left: -50%;
+                background: $background-color;
+            }
+            &::before {
+                transform: rotate(45deg);
+            }
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
     }
 }

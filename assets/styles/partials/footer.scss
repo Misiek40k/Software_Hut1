@@ -64,6 +64,7 @@
     }
     &__btns {
         text-align: right;
+        border-top: $base-unit*0.05 solid rgba($background-color, .2);
     }
     &__btn {
         padding: $space*.5 $space*0.5;

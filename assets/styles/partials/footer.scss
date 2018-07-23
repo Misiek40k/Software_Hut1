@@ -1,3 +1,30 @@
-.main-foot-wrapper{}
+.main-foot-wrapper {}
 
-.main-foot{}
+.main-foot {
+    background-color: $product-color;
+    color: $background-color;
+    margin-top: $space*1.5;
+    @include min-media($br-desktop) {
+        margin-top: $space*2.5;
+    }
+    &__nav {
+        padding-top: $space*2.5;
+
+        &__col{
+
+        }
+
+        &__cat{}
+
+        &__lnk{
+        }
+    }
+
+    &__btns{}
+
+    &__btn{
+        &__hamburger{}
+
+        &__quit{}
+    }
+}

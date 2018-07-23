@@ -1,7 +1,41 @@
-.building-wrapper{
-    
+.building-wrapper {
+    margin: 0 auto;
+    max-width: $wrapper-max;
+    @include min-media($br-desktop) {
+        padding-top: 0;
+        padding-right: $space;
+        padding-left: $space;
+    }
 }
 
-.building{
-    
+.building {
+    margin: $space 0 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: $background-color;
+    &__cont {
+        display: flex;
+        flex-direction: column;
+
+        @include min-media($br-tablet){
+
+        }
+
+        &__head{
+            margin-top: $space*3;
+            margin-bottom: $space*2;
+            @include min-media($br-desktop){
+                margin-top: $space*6.5;
+            }
+        }
+
+        &__descr{
+            
+        }
+
+        &__paragraphs{
+            
+        }
+    }
 }

@@ -44,7 +44,7 @@
                     max-width: $space*7;
                 }
             }
-            &--desk {
+            &__desk {
             display: inline-flex;
                 width: 100%;
                 margin-bottom: $space*.75;
@@ -53,22 +53,22 @@
                 }
                 
             }
-            &--head {
+            &__head {
                 margin-bottom: $space*.25;
                 @extend%h3;
             }
-            &--txt {
+            &__txt {
                 @extend%paragraphText;
             }
         }
-        &--dots {
+        &__dots {
             margin-top: $space*.5;
             text-align: center;
             @include min-media($br-tablet) {
                 display: none;
             }
         }
-        &--dot {
+        &__dot {
             margin-right: $space*.5;
             height: $base-unit*.3;
             display: inline-block;

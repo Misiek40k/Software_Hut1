@@ -16,7 +16,7 @@
     overflow: hidden;
     background-color: $background-color;
     &__cont {
-        &--items {
+        &__items {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -47,11 +47,11 @@
                     display: flex;
                 }
             }
-            &--head {
+            &__head {
                 @extend%h2;
                 margin-bottom: $space;
             }
-            &--txt {
+            &__txt {
                 @extend%paragraphText;
                 @include min-media($br-tablet) {
                     max-width: $space*4;
@@ -61,14 +61,14 @@
                 }
             }
         }
-        &--dots {
+        &__dots {
             margin-top: $space;
             text-align: center;
             @include min-media($br-tablet) {
                 display: none;
             }
         }
-        &--dot {
+        &__dot {
             margin-right: $space*.5;
             height: $base-unit*.3;
             display: inline-block;

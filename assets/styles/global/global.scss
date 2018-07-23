@@ -4,25 +4,12 @@
 html {
     box-sizing: border-box;
     background-color: $background-color;
-    font-size: 12px;
-    @media (min-width: $br-mobile) {
-        font-size: 16px;
-    }
-    @media (min-width: $br-desktop) {
-        font-size: 20px;
-    }
 }
 
 *,
 *:before,
 *:after {
     box-sizing: inherit;
-}
-
-body {
-    font-size: $body-font-size;
-    font-family: $first-base-font-family;
-    color: $body-color;
 }
 
 a {

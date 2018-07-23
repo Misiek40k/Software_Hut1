@@ -31,7 +31,7 @@
         @include min-media($br-desktop) {
             width: 60%;
         }
-        &--items {
+        &__items {
             display: flex;
             flex-direction: column;
             @include min-media($br-desktop) {
@@ -40,7 +40,7 @@
                 padding-right: 0;
                 background-color: transparent;
             }
-            &--head {
+            &__head {
                 text-align: left;
                 @extend%bigHeadlineText;
                 @include max-media($br-desktop) {
@@ -51,7 +51,7 @@
                     padding-right: $space*.25;
                 }
             }
-            &--txt {
+            &__txt {
                 @extend%descriptionText;
                 text-align: left;
                 background-color: $background-color;
@@ -73,7 +73,7 @@
                     padding-right: 0;
                 }
             }
-            &--links {
+            &__links {
                 padding-top: $space;
                 display: flex;
                 background-color: $background-color;

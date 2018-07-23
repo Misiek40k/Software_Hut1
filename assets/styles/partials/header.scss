@@ -37,7 +37,7 @@
     margin-top: $space * 2;
     flex-basis: 20%;
     &__menu {
-        &--item {
+        &__item {
             text-align: center;
             padding: $space * 0.5 0;
             display: none;
@@ -54,7 +54,7 @@
         align-items: stretch;
         text-shadow: 0 0 .15px #FFF, 0 0 .15px #fff;
         &__menu {
-            &--item {
+            &__item {
                 font-family: $second-base-font-family;
                 font-weight: $sfw-regular;
                 font-size: $base-unit*.65;
@@ -88,7 +88,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            &--item {
+            &__item {
                 font-family: $second-base-font-family;
                 font-weight: $sfw-regular;
                 font-size: $base-unit*.85;
@@ -124,7 +124,7 @@
     font-weight: $sfw-regular;
     font-size: $base-unit*.75;
     &__menu {
-        &--item {
+        &__item {
             text-align: center;
             padding: $space*.3 0 $space * 0.5;
         }
@@ -138,7 +138,7 @@
         margin-top: $space * 1.5;
         
         &__menu {
-            &--item {
+            &__item {
                 display: block;
                 float: left;
                 margin-left: $space * 1.5;

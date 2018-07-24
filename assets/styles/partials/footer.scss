@@ -75,7 +75,7 @@
             margin-bottom: $space*3;
         }
         &:last-of-type {
-            margin-right: $space*.5;
+            margin-right: $space*.25;
         }
         &:hover {
             cursor: pointer;
@@ -113,9 +113,9 @@
                 content: '';
                 position: absolute;
                 height: $space*0.05;
-                width: 100%;
+                width: 80%;
                 top: 80%;
-                left: -50%;
+                left: -100%;
                 background: $background-color;
             }
             &::before {

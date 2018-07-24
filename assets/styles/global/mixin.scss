@@ -10,8 +10,6 @@
     }
 }
 
-$dottedLineSpacing: 6;
-
 @mixin dotted-line($color: #000, $alignment: bottom) {
     background-image: linear-gradient(to right, $color 0%, $color (100% / $dottedLineSpacing), transparent (100% / $dottedLineSpacing));
     background-position: 0 $alignment; background-size: ($dottedLineSpacing + px) 1px;

@@ -8,7 +8,6 @@
         padding-left: $space *3;
     }
     @include min-media($br-desktop) {
-        padding-top: 0;
         padding-right: $space;
         padding-left: $space;
     }

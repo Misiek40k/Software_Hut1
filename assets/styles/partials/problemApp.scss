@@ -10,10 +10,11 @@
 }
 
 .problemApp {
-    margin: $space 0 0;
+    padding: $space 0 $space;
     left: 0;
     width: 100%;
     overflow: hidden;
+    background-color: $background-color;
     &__header {
         @extend%h4SectionHeader;
         margin-bottom: $space*.25;

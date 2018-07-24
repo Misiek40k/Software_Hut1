@@ -19,7 +19,7 @@
     left: 0;
     width: 100%;
     overflow: hidden;
-    background-color: $background-color;
+    background-color: $item-color;
     background-image: url(/assets/images/layer_59.png);
     background-repeat: no-repeat;
     background-size: $base-unit*16;
@@ -42,6 +42,7 @@
         }
         &__descr {
             margin-bottom: $space*9.5;
+            max-width: $space*19;
             @include min-media($br-desktop){
                 margin-bottom: $space*2;
             }

@@ -25,8 +25,39 @@
     &__btns {
         display: flex;
         padding-bottom: $space*2;
+        justify-content: flex-start;
         @include min-media($br-desktop) {
             padding-bottom: $space*2.5;
+            justify-content: center;
+        }
+    }
+    &__btn {
+        &__contact {
+            text-shadow: 0 0 .15px #000, 0 0 .15px #000;
+            padding-right: $space*.5;
+            &::after {   
+                content: "";
+                display: block;
+                margin: 0;
+                width: 50%;
+                border-bottom: 2px solid $secondary-color;
+                
+            }
+        }
+        &__call {
+            padding-left: $space*.5;
+            text-shadow: 0 0 .15px #fff, 0 0 .15px #fff;
+            &:hover {
+                text-shadow: 0 0 .15px #000, 0 0 .15px #000;
+                &::after {
+                    content: "";
+                    display: block;
+                    margin: 0;
+                    width: 50%;
+                    border-bottom: 2px solid $secondary-color;
+                    
+                }
+            }
         }
     }
     &__main {
@@ -43,6 +74,10 @@
         }
         &__label {
             padding-bottom: $space*.5;
+            font-family: $second-base-font-family;
+            font-weight: $sfw-light;
+            color: $text-color;
+            font-size: $base-unit*0.65;
             &::after {
                 content: "*";
                 color: $product-color;
@@ -51,7 +86,13 @@
         &__input {
             margin-bottom: $space;
             border: none;
+            height: $space;
             @include dotted-line;
+            &::placeholder {
+                @extend%h3;
+                color: $text-color;
+                opacity: 1;
+            }
         }
         &__area {
             display: flex;
@@ -61,7 +102,16 @@
             &__txt {
                 border: none;
                 resize: none;
+                height: $space*2;
+                @include min-media($br-desktop) {
+                    height: $space;
+                }
                 @include dotted-line;
+                &::placeholder {
+                    @extend%h3;
+                    color: $text-color;
+                    opacity: 1;
+                }
             }
         }
         &__submit {

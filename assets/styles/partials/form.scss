@@ -1,4 +1,4 @@
-.form-wrapper{
+.form-wrapper {
     margin: 0 auto;
     max-width: $wrapper-max;
     padding-right: $space*.5;
@@ -13,22 +13,46 @@
     }
 }
 
-.form{
+.form {
     margin: $space*2.5 0 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     background-color: $item-color;
-    @include min-media($br-desktop){
+    @include min-media($br-desktop) {
         margin: $space*4 0 0;
     }
 
-    &__main{
+    &__btns{
         display: flex;
-
-        &__element{
+        padding-bottom: $space*2;
+        @include min-media($br-desktop){
+            padding-bottom: $space*2.5;
+        }
+    }
+    &__main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__element {
             display: flex;
             flex-direction: column;
+            width: 100%;
+            @include min-media($br-desktop){
+                width: 45%;
+            }
+        }
+        &__label {}
+        &__input {}
+        &__area {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            &__txt {}
+        }
+        &__submit {
+            
+            &__btn {}
         }
     }
 }

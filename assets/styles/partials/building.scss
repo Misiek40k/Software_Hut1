@@ -52,9 +52,9 @@
         &__descr {
             @extend%descriptionText;
             margin-bottom: $space*9.5;
-            max-width: $space*19;
             @include min-media($br-desktop) {
                 margin-bottom: $space*2;
+                max-width: $space*19;
             }
         }
         &__paragraphs {

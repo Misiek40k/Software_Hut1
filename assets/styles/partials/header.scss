@@ -68,7 +68,6 @@
                 }
                 &:hover {
                     text-shadow: 0 0 .15px #000, 0 0 .15px #000;
-                    
                     &::after {
                         content: "";
                         display: block;
@@ -79,6 +78,13 @@
                     }
                 }
             }
+        }
+    }
+    &__arrow {
+        &::after {
+            margin-left: $base-unit*.25;
+            font-family: 'FontAwesome';
+            content: '\f107';
         }
     }
     &__sign {
@@ -95,19 +101,19 @@
                 margin-left: $space*1.5;
                 &:first-child {
                     margin-left: $space;
-                    margin-top:  $space * .75;
+                    margin-top: $space * .75;
                 }
-                &:nth-child(2){
-                    margin-top:  $space * .67;
+                &:nth-child(2) {
+                    margin-top: $space * .67;
                 }
                 &:last-child {
                     color: $background-color;
                     background-color: $product-color;
                     align-self: stretch;
-                    p{
+                    p {
                         padding-left: $space*1.5;
                         padding-right: $space*3;
-                        padding-top: $space; 
+                        padding-top: $space;
                     }
                 }
             }
@@ -128,6 +134,17 @@
             padding: $space*.3 0 $space * 0.5;
         }
     }
+
+    &__arrow{
+        &::after{
+            margin-left: $base-unit*.25;
+            font-family: 'FontAwesome';
+            content: '\f107';
+            @include min-media($br-desktop){
+                display: none;
+            }
+        }
+    }
     @include min-media($br-desktop) {
         font-size: $base-unit*.95;
         order: 2;
@@ -135,7 +152,6 @@
         top: 0;
         padding-left: $space * 7;
         margin-top: $space * 1.5;
-        
         &__menu {
             &__item {
                 display: block;
@@ -177,7 +193,7 @@
     padding: $space $space*0.5;
     width: $space*1.5;
     color: $text-color;
-    &:hover{
+    &:hover {
         cursor: pointer;
     }
     &__hamburger {

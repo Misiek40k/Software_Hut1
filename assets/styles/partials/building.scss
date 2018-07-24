@@ -25,25 +25,35 @@
     background-size: $base-unit*16;
     background-position: 50% 75%;
     @include min-media($br-desktop) {
-        background-size: $base-unit*20;
-        background-position: 80% 5%;
+        background-size: 30%;
+        background-position: 85% 10%;
     }
     &__cont {
         display: flex;
         flex-direction: column;
         @include min-media($br-tablet) {}
         &__head {
+            @extend%bigHeadlineText;
+            color: $text-color;
+            max-width: $space*18;
             margin-top: $space*3;
             margin-bottom: $space*1.5;
             @include min-media($br-desktop) {
                 margin-top: $space*6.5;
                 margin-bottom: $space*2;
             }
+
+            @include max-media($br-desktop) {
+                align-self: center;
+                font-size: $space;
+                line-height: $space*1.25;
+            }
         }
         &__descr {
+            @extend%descriptionText;
             margin-bottom: $space*9.5;
             max-width: $space*19;
-            @include min-media($br-desktop){
+            @include min-media($br-desktop) {
                 margin-bottom: $space*2;
             }
         }
@@ -65,9 +75,12 @@
                 }
             }
             &__head {
+                @extend%h3;
                 padding-bottom: $space*.5;
             }
-            &__txt {}
+            &__txt {
+                @extend%paragraphText;
+            }
         }
     }
 }

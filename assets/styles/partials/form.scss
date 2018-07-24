@@ -22,4 +22,13 @@
     @include min-media($br-desktop){
         margin: $space*4 0 0;
     }
+
+    &__main{
+        display: flex;
+
+        &__element{
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }

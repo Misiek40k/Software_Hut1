@@ -7,23 +7,23 @@
         <form id="mainForm" class="form__main" action="">
             <div class="form__main__element">
                 <label for="firstName" class="form__main__label">First Name*</label>
-                <input type="text" id="firstName" class="form__main__input" required>
+                <input type="text" id="firstName" class="form__main__input" required placeholder="John">
             </div>
             <div class="form__main__element">
                 <label for="familyName" class="form__main__label">Family Name*</label>
-                <input type="text" id="familyName" class="form__main__input" required>
+                <input type="text" id="familyName" class="form__main__input" required placeholder="Wick">
             </div>
             <div class="form__main__element">
                 <label for="phone" class="form__main__label">Your Phone</label>
-                <input type="text" id="phone" class="form__main__input">
+                <input type="text" id="phone" class="form__main__input" placeholder="+48 605708904">
             </div>
             <div class="form__main__element">
                 <label for="mail" class="form__main__label">Your email*</label>
-                <input type="text" id="mail" required class="form__main__input">
+                <input type="text" id="mail" required class="form__main__input" placeholder="johnwick@hollywood.com">
             </div>
             <div class="form__main__area">
                 <label for="textArea" class="form__main__label">Message*</label>
-                <input type="text" id="textArea" class="form__main__area__txt" required>
+                <textarea id="textArea" form="mainForm" class="form__main__area__txt" required placeholder="Hello! I'm just wondering if you could....">
             </div>
             <div class="form__main__submit">
                 <input type="submit" form="mainForm" value="Send message" class="form__main__submit__btn">

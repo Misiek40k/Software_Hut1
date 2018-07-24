@@ -1,5 +1,34 @@
 <section class="form">
     <div class="form-wrapper">
-        <div class="form__btns"></div>
+        <div class="form__btns">
+            <span class="form__btn__contact">Contact form</span>
+            <span class="form__btn__call">Call us</span>
+        </div>
+        <form id="mainForm" class="form__main" action="">
+            <div class="form__main__element">
+                <label for="firstName" class="form__main__label">First Name*</label>
+                <input type="text" id="firstName" required>
+            </div>
+            <div class="form__main__element">
+                <label for="familyName" class="form__main__label">Family Name*</label>
+                <input type="text" id="familyName" required>
+            </div>
+            <div class="form__main__element">
+                <label for="phone" class="form__main__label">Your Phone</label>
+                <input type="text" id="phone">
+            </div>
+            <div class="form__main__element">
+                <label for="mail" class="form__main__label">Your email*</label>
+                <input type="text" id="mail" required>
+            </div>
+            <div class="form__main__element">
+                <label for="textArea" class="form__main__area">Message*</label>
+                <input type="text" id="textArea" required>
+            </div>
+            <div class="form__main__element">
+                <input type="submit" form="mainForm" value="Send message" class="form__main__submit">
+            </div>
+        </form>
+
     </div>
 </section>

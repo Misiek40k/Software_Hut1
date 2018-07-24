@@ -177,6 +177,19 @@
                     }
                 }
             }
+            &--item{
+                text-shadow: 0 0 .15px #000, 0 0 .15px #000;
+                    border-bottom: 0;
+                    letter-spacing: 0;
+                &::after{
+                    
+                    content: "";
+                        display: block;
+                        margin: 0;
+                        width: 50%;
+                        border-bottom: 2px solid $secondary-color;
+                }
+            }
         }
     }
     &__select {

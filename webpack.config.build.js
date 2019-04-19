@@ -9,12 +9,12 @@ module.exports = merge(webpackConfig, {
     devtool: 'source-map',
 
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, 'build'),
         filename: '[name].[chunkhash].js'
     },
 
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin(['build']),
         new CopyWebpackPlugin([
             {from:'assets/images',to:'assets/images'}
         ])
